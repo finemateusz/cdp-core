@@ -1,0 +1,10 @@
+{
+  "name": "UserRecordV2",
+  "version": 2,
+  "fields": [
+    { "name": "user_id", "type": "uint64", "grade": 1 },
+    { "name": "email", "type": "string_utf8", "grade": 2 },
+    { "name": "reputation_score", "type": "float32", "grade": 3 },
+    { "name": "is_active", "type": "bool", "grade": 4 }
+  ]
+}

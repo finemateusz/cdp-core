@@ -1,0 +1,31 @@
+--- Analyzing dummy_blockchain_transactions.json (55.85 MB) ---
+Encoding with CDP...
+Encoding with zstd...
+Encoding with gzip...
+
+--- Analyzing etherscan_transactions.json (7.46 MB) ---
+Encoding with CDP...
+Encoding with zstd...
+Encoding with gzip...
+
+
+========================================================================================================================
+--- DETAILED COMPRESSION SUMMARY ---
+========================================================================================================================
+                              file original_size cdp_size cdp_ratio  cdp_time  zstd_size zstd_ratio zstd_time gzip_size gzip_ratio gzip_time
+dummy_blockchain_transactions.json      55.85 MB 21.71 MB    38.88% 172.4318s   16.37 MB     29.31%  37.8342s  19.55 MB     35.00%   4.4287s
+       etherscan_transactions.json       7.46 MB  1.39 MB    18.61%  20.8097s 1007.36 KB     13.19%   4.5723s   1.25 MB     16.79%   0.4250s
+
+LOWER ratio is BETTER.
+========================================================================================================================
+
+
+========================================================================================================================
+--- ENTROPY ANALYSIS (LOWER IS BETTER) ---
+========================================================================================================================
+                              file entropy_original    entropy_class    entropy_index
+dummy_blockchain_transactions.json 4.7675 bits/byte 4.0696 bits/byte 1.9232 bits/byte
+       etherscan_transactions.json 4.8344 bits/byte 4.2023 bits/byte 1.9156 bits/byte
+
+(Note: Ideal zstd compression ratio should be close to the lowest component Entropy / 8.0)
+========================================================================================================================

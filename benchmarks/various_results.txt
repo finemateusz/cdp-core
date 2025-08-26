@@ -1,0 +1,65 @@
+==================================================
+Generating benchmark datasets...
+==================================================
+Generated 'data/testsets/klein_1mb.dat' (1MB, 10.0% noise).
+Generated 'data/testsets/canonical_1mb.dat' (1MB, 90.0% bias to index 0).
+
+--- Analyzing dickens (9.72 MB) ---
+Encoding with CDP...
+Encoding with zstd...
+Encoding with gzip...
+
+--- Analyzing osdb (9.62 MB) ---
+Encoding with CDP...
+Encoding with zstd...
+Encoding with gzip...
+
+--- Analyzing mozilla (48.85 MB) ---
+Encoding with CDP...
+Encoding with zstd...
+Encoding with gzip...
+
+--- Analyzing nci (32.00 MB) ---
+Encoding with CDP...
+Encoding with zstd...
+Encoding with gzip...
+
+--- Analyzing sao (6.92 MB) ---
+Encoding with CDP...
+Encoding with zstd...
+Encoding with gzip...
+
+--- Analyzing xml (5.10 MB) ---
+Encoding with CDP...
+Encoding with zstd...
+Encoding with gzip...
+
+
+========================================================================================================================
+--- DETAILED COMPRESSION SUMMARY ---
+========================================================================================================================
+   file original_size  cdp_size cdp_ratio  cdp_time zstd_size zstd_ratio zstd_time gzip_size gzip_ratio gzip_time
+dickens       9.72 MB   4.72 MB    48.57%  24.7785s   2.72 MB     27.96%   5.0446s   3.68 MB     37.82%   0.8526s
+   osdb       9.62 MB   3.87 MB    40.21%  24.5838s   2.96 MB     30.74%   4.7244s   3.50 MB     36.42%   0.4375s
+mozilla      48.85 MB  18.27 MB    37.39% 113.8551s  14.39 MB     29.47%  16.5395s  18.16 MB     37.18%   7.4706s
+    nci      32.00 MB   2.55 MB     7.97%  78.1894s   1.59 MB      4.96%  16.3350s   2.85 MB      8.91%   2.2305s
+    sao       6.92 MB   5.70 MB    82.42%  16.2555s   4.77 MB     68.95%   1.9577s   5.08 MB     73.44%   0.5155s
+    xml       5.10 MB 754.23 KB    14.45%  10.9056s 443.45 KB      8.50%   1.7412s 643.46 KB     12.33%   0.1813s
+
+LOWER ratio is BETTER.
+========================================================================================================================
+
+
+========================================================================================================================
+--- ENTROPY ANALYSIS (LOWER IS BETTER) ---
+========================================================================================================================
+   file entropy_original    entropy_class    entropy_index
+dickens 4.5323 bits/byte 3.8237 bits/byte 1.7731 bits/byte
+   osdb 6.5935 bits/byte 5.1548 bits/byte 1.9547 bits/byte
+mozilla 6.2224 bits/byte 5.2161 bits/byte 1.6581 bits/byte
+    nci 2.4293 bits/byte 2.1575 bits/byte 1.3928 bits/byte
+    sao 7.5252 bits/byte 6.1509 bits/byte 1.9128 bits/byte
+    xml 5.5182 bits/byte 4.6215 bits/byte 1.8249 bits/byte
+
+(Note: Ideal zstd compression ratio should be close to the lowest component Entropy / 8.0)
+========================================================================================================================
